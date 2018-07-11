@@ -1,8 +1,11 @@
 # MVCRegistrationSetup
 
 Features Implemented:
+
 1-Anonymous users are not allowed to view pages on the site. If an anonymous user vistis the site, he is redirected to the login page.
+
 2-I have validations in place, which will ensure data integrity and also checks if a user with the email provided already exists in the database.
+
 3-Once the user submits the registration form, a new form appears where the admin is suppose to provide his login credentials for the email that will be used to send the email verification code to the newly registered user.
 NOTE: Instead of asking admin credentials, I could have hard coded the email and password, but then since I have to push the code on GitHub I took out the hard coded part and  implemented a form that asks for the admin email and password.
 4-The admin enters the email and password and submits the form. If the admin's email credentials are not correct, the same form is loaded and an error message is displayed informing the admin to check his email credentials.
