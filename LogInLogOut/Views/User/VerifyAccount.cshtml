@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "VerifyAccount";
+}
+
+@if(Convert.ToBoolean(ViewBag.IsAccountVerified))
+{
+    <div class="alert alert-success">
+        <strong>Thank you for confirming your email</strong><br />
+        <strong>Your account is now activated. @Html.ActionLink("Click Here To Login", "Login", "User")</strong>
+    </div> 
+}
+else
+{
+    <div class="alert alert-danger">
+        <strong>@ViewBag.AccountVerificationMessage</strong>
+        <br />
+        <br />
+        @foreach(System.Data.Entity.Validation.DbEntityValidationResult validationErrors in (ViewBag.DataBaseValidationExceptionsOnVerification as System.Data.Entity.Validation.DbEntityValidationException).EntityValidationErrors)
+        {
+            foreach(System.Data.Entity.Validation.DbValidationError singleValidationError in validationErrors.ValidationErrors)
+            {
+                <strong>Error! </strong>@String.Format("{0: }{1}", validationErrors.Entry.Entity, singleValidationError.ErrorMessage)
+            }
+        }
+    </div>
+}
+
