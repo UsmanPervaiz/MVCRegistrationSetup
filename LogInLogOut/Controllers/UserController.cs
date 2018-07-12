@@ -56,11 +56,11 @@ namespace LogInLogOut.Controllers
                             isPasswordMatching = true;
                             messageForLogin = "You Have Succefully Logged In!";
 
-                            FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(login.EmailId, login.RemeberMe, 2);                     
+                            FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket(login.EmailId, login.RemeberMe, 720);                     
                             string encrypted = FormsAuthentication.Encrypt(authTicket);
 
                             HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted);
-                            cookie.Expires = DateTime.Now.AddMinutes(1);
+                            cookie.Expires = DateTime.Now.AddDays(1);
                             cookie.HttpOnly = true;
                             Response.Cookies.Add(cookie);
 
@@ -126,7 +126,7 @@ namespace LogInLogOut.Controllers
 
                 user.Password = user.HashPassword(user.Password, salt);
                 user.ConfirmPassword = user.HashPassword(user.ConfirmPassword, salt);
-                user.IsEmailVerified = false;
+                user.IsEmailVerified = true;
 
                 Session["UserToSaveToDB"] = user;
                 return RedirectToAction("SiteAdminEmailPassword");

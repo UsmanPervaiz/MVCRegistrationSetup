@@ -28,15 +28,17 @@ namespace LogInLogOut.Models
         [EmailAddress(ErrorMessage = "Email Address is not Valid.")]
         public string Email { get; set; }
 
+        [Required]
+        public string Gender { get; set; }
+
         [Display(Name = "Date of Birth")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", NullDisplayText = "Date of Birth Not Provided", ApplyFormatInEditMode = true)]
-        public Nullable<System.DateTime> DatOfBirth { get; set; }
+        public Nullable<System.DateTime> DateOfBirth { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Password is Required.")]
         [DataType(DataType.Password)]
         [MinLength(6, ErrorMessage = "Password minimum 6 characters.")]
-        [ScaffoldColumn(false)]
         public string Password { get; set; }
 
         [Display(Name = "Confirm Password")]
