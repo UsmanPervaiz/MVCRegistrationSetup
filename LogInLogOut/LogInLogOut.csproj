@@ -107,6 +107,23 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\sunny\images\animated-overlay.gif" />
+    <Content Include="Content\sunny\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Content\sunny\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Content\sunny\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Content\sunny\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Content\sunny\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Content\sunny\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Content\sunny\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Content\sunny\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Content\sunny\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Content\sunny\images\ui-icons_d19405_256x240.png" />
+    <Content Include="Content\sunny\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="Content\sunny\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Content\sunny\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Content\sunny\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="Content\sunny\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Content\sunny\jquery-ui-1.10.4.custom.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -135,11 +152,13 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.custom.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\AutoCompleteUnobtrusiveJavaScript.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

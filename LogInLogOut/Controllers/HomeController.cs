@@ -73,5 +73,14 @@ namespace LogInLogOut.Controllers
             }
            
         }
+
+        public JsonResult AutoCompleteSearch(string term)
+        {
+            using (UsersDbContext db = new UsersDbContext())
+            {
+                List<string> studentNames = db.Users.Where(std => std.FirstName.ToLower().StartsWith(term.ToLower())).Select(usr => usr.FirstName + " " + usr.LastName).ToList();
+                return Json(studentNames, JsonRequestBehavior.AllowGet);
+            }
+        }
     }
 }
