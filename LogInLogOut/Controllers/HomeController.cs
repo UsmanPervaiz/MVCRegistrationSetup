@@ -12,6 +12,7 @@ namespace LogInLogOut.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        //Comment
         [Authorize]
         public ActionResult Index(string searchByNameOrGender, string searchTerm, int? page, string sortBy)
         {
